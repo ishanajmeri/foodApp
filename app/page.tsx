@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Coffee, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -96,27 +97,31 @@ export default function Home() {
           </motion.p>
         </div>
 
-        <motion.button
-          className="w-full max-w-md bg-amber-800/80 backdrop-blur-sm text-white py-5 px-8 rounded-2xl flex items-center justify-center gap-3 text-lg font-medium mb-8 border border-amber-700/30"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.6, type: "spring", stiffness: 100 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Get Started
-          <motion.div
-            animate={{
-              x: [0, 5, 0]
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity
-            }}
+        <Link href="/owl" className="w-full max-w-md">
+          <motion.button
+            className="w-full bg-amber-800/80 backdrop-blur-sm text-white py-5 px-8 rounded-2xl flex items-center justify-center gap-3 text-lg font-medium border border-amber-700/30"
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.6, duration: 0.6, type: "spring", stiffness: 100 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <ArrowRight className="w-6 h-6" />
-          </motion.div>
-        </motion.button>
+            Get Started
+            <motion.div
+              animate={{
+                x: [0, 5, 0]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity
+              }}
+            >
+              <ArrowRight className="w-6 h-6" />
+            </motion.div>
+          </motion.button>
+        </Link>
+
+        <div className="w-full max-w-md mb-8" />
 
         <motion.div
           className="w-32 h-1 bg-gray-600 rounded-full"
