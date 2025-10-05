@@ -5,6 +5,7 @@ import { Search, Plus, Calendar, User, Cat } from 'lucide-react';
 import Lottie from "lottie-react";
 // import owlAnimation from '/lottie/owl_animation.json';
 import { useEffect, useState } from 'react';
+import NearBySection from './components/NearBySection';
 
 export default function OwlPage() {
   const [owlAnim, setOwlAnim] = useState(null);
@@ -17,7 +18,7 @@ export default function OwlPage() {
   }, []);
 
   return (
-    <div>
+    <div className='h-screen'>
       <motion.div
         className="h-full relative w-full max-w-md shadow-2xl overflow-hidden"
         style={{ background: 'linear-gradient(to bottom, #2d1d3d 50%, #6b4e87 100%)', aspectRatio: '9/19' }}
@@ -73,37 +74,7 @@ export default function OwlPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 }}
             >
-              <motion.div
-                className="bg-purple-600/40 backdrop-blur-sm rounded-2xl p-4"
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 1.5 }}
-                whileHover={{ scale: 1.02 }}
-              >
-                <h3 className="text-white text-lg font-semibold mb-3">Saite fiori</h3>
-                <div className="flex justify-between text-sm text-white/80">
-                  <div>
-                    <div className="flex items-center gap-1 mb-1">
-                      <div className="w-2 h-2 bg-white rounded-full" />
-                      <span>Cardiners</span>
-                    </div>
-                    <div className="flex items-center gap-1 mb-1">
-                      <div className="w-2 h-2 border border-white rounded-full" />
-                      <span>Suort Alkcraçon</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <div className="w-2 h-2 bg-white" />
-                      <span>Elitrefired</span>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div>Vit̃apiner Vitiroubas</div>
-                    <div>Pesofar af ritols</div>
-                    <div>Asp Iniderers</div>
-                    <div>éa hivrs</div>
-                  </div>
-                </div>
-              </motion.div>
+              <NearBySection />
 
               <motion.div
                 className="text-white text-sm flex items-center gap-2 px-2"
@@ -172,37 +143,6 @@ export default function OwlPage() {
               </motion.div>
             </motion.div>
 
-            <motion.div
-              className="mt-6 bg-purple-600/40 backdrop-blur-sm rounded-2xl p-4 flex justify-around items-center"
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.9, type: "spring" }}
-            >
-              <motion.button
-                className="flex flex-col items-center gap-1"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Calendar className="w-6 h-6 text-white" />
-                <span className="text-white text-xs">Cuisines</span>
-              </motion.button>
-              <motion.button
-                className="flex flex-col items-center gap-1"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <User className="w-6 h-6 text-white" />
-                <span className="text-white text-xs">Price Range</span>
-              </motion.button>
-              <motion.button
-                className="flex flex-col items-center gap-1"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Cat className="w-6 h-6 text-white" />
-                <span className="text-white text-xs">Suiteline</span>
-              </motion.button>
-            </motion.div>
           </div>
         </div>
       </motion.div>
