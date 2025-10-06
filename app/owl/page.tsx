@@ -6,6 +6,7 @@ import Lottie from "lottie-react";
 // import owlAnimation from '/lottie/owl_animation.json';
 import { useEffect, useState } from 'react';
 import NearBySection from './components/NearBySection';
+import FoodCarousel from '@components/common/FoodCarousel';
 
 export default function OwlPage() {
   const [owlAnim, setOwlAnim] = useState(null);
@@ -74,6 +75,7 @@ export default function OwlPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 }}
             >
+              <FoodCarousel />
               <NearBySection />
 
               <motion.div
