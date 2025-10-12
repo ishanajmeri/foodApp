@@ -106,8 +106,8 @@ export default function FramerDraggableCarousel() {
             }}
             style={{ x }}
           >
-            {items.map((item) => (
-              <div className="flex-shrink-0 w-full h-full  shadow-2xl overflow-hidden bg-black/80">
+            {items.map((item, index) => (
+              <div className="flex-shrink-0 w-full h-full  shadow-2xl overflow-hidden bg-black/80" key={index}>
                 {/* Image */}
                 <div className="relative h-64 w-full">
                   <img

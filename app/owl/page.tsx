@@ -21,7 +21,7 @@ export default function OwlPage() {
   return (
     <div className='h-screen'>
       <motion.div
-        className="h-full relative w-full max-w-md shadow-2xl overflow-hidden"
+        className="h-full relative w-full max-w-md shadow-2xl overflow-scroll"
         style={{ background: 'linear-gradient(to bottom, #2d1d3d 50%, #6b4e87 100%)', aspectRatio: '9/19' }}
         initial={{ scale: 0.8, opacity: 1, rotateY: 0 }}
         animate={{ scale: 1, opacity: 1, rotateY: 0 }}
@@ -46,7 +46,7 @@ export default function OwlPage() {
               />
             </motion.div>
           </div>
-          <div className='mt-[-50px]'>
+          <div className='mt-[-50px] pb-[100px]'>
             <div className="flex flex-col items-center mb-6">
               <motion.div
                 className="w-full relative"
